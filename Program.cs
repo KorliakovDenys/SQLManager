@@ -8,6 +8,23 @@ static class Program {
     static void Main(string[] args) {
         SqlManager.MessageReceived += SqlManagerOnMessageReceived;
         
+        HandleSqlCommand(@"SELECT * FROM Suppliers");
+
+        HandleSqlCommand(@"INSERT INTO Suppliers (name) VALUES ('Chinese brand')");
+        
+        HandleSqlCommand(@"SELECT * FROM Suppliers");
+        
+        HandleSqlCommand(@"UPDATE Suppliers 
+                           SET name = 'unknown brand'
+                           WHERE id = (SELECT max(id) FROM Suppliers)");
+        
+        HandleSqlCommand(@"SELECT * FROM Suppliers");
+        
+        HandleSqlCommand(@"DELETE FROM Suppliers 
+                           WHERE id = (SELECT max(id) 
+                           FROM Suppliers)");
+        
+        HandleSqlCommand(@"SELECT * FROM Suppliers");
     }
     
 
