@@ -26,8 +26,9 @@ public class SqlManager {
             var reader = command.ExecuteReader();
             MessageReceived?.Invoke(this, new MessageHandlerArgs("Executed."));
 
-            MessageReceived?.Invoke(this, new MessageHandlerArgs($"Records affected: {reader.RecordsAffected.ToString()}"));
-                
+            var recAff = reader.RecordsAffected;
+            if(recAff >= 0) MessageReceived?.Invoke(this, new MessageHandlerArgs($"Records affected: {recAff}"));
+
             if(!reader.HasRows) throw new Exception("Response empty.");
                 
             while (reader.Read()) {

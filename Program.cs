@@ -8,8 +8,8 @@ static class Program {
     static void Main(string[] args) {
         SqlManager.MessageReceived += SqlManagerOnMessageReceived;
         
-        HandleSqlCommand("SELECT * FROM Goods");
     }
+    
 
     private static void HandleSqlCommand(string command) {
         var response = SqlManager.Fetch(command);
