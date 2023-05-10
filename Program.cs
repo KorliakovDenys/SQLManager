@@ -1,8 +1,7 @@
-﻿namespace ADO.NET_HW_2; 
+﻿namespace SQLManager; 
 
 static class Program {
-    private const string ConnectionString =
-        @"***";
+    private const string ConnectionString = @"***";
 
     private static readonly SqlManager SqlManager = new (ConnectionString);
     

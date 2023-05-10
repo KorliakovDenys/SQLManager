@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.NET_HW_2", "ADO.NET_HW_2.csproj", "{1008C3D2-A309-4782-9674-40E200BEE347}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLManager", "SQLManager.csproj", "{1008C3D2-A309-4782-9674-40E200BEE347}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
